@@ -1,4 +1,4 @@
-import  {Component} from 'react'
+import {Component} from 'react'
 import store from '../index'
 
 const api_key = 'bf3565940c52aaa3383c1dbc23799bb1';
@@ -55,7 +55,8 @@ export default class WeatherPanel extends Component {
             method: 'GET',
         }).then(res => res.blob())
             .then(blob => {
-                let fileUrl = (window.URL || window.webkitURL).createObjectURL(blob);this.setState({
+                let fileUrl = (window.URL || window.webkitURL).createObjectURL(blob);
+                this.setState({
                     isLoading: false,
                     city,
                     coordinates,

@@ -21,7 +21,8 @@ export default (props) => {
         </div>
         <div className={"weather-value-row"}>
             <span className={"weather-value-key"}>Координаты</span>
-            <span className={"weather-value-value"}>[{props.state.coordinates.longitude.toFixed(2)}, {props.state.coordinates.latitude.toFixed(2)}]</span>
+            <span
+                className={"weather-value-value"}>[{props.state.coordinates.longitude.toFixed(2)}, {props.state.coordinates.latitude.toFixed(2)}]</span>
         </div>
     </div>
 }

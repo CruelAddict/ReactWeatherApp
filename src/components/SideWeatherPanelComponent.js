@@ -16,7 +16,8 @@ export default (props) => {
             <div className={"delete-favorite-button-container"}>
                 <button
                     onClick={props.handleFavoriteRemoval}
-                    className={"delete-favorite favorites-action-button"}>×</button>
+                    className={"delete-favorite favorites-action-button"}>×
+                </button>
             </div>
         </div>
         <div className={"loading-side"}>
@@ -44,7 +45,8 @@ export default (props) => {
                     <div className={"delete-favorite-button-container"}>
                         <button
                             onClick={props.handleFavoriteRemoval}
-                            className={"delete-favorite favorites-action-button"}>×</button>
+                            className={"delete-favorite favorites-action-button"}>×
+                        </button>
                     </div>
                 </div>
                 <div className={"side-weather-items"}>

@@ -37,9 +37,9 @@ class FavoritesList extends Component {
         return (
             <div>
                 <FavoritesListHeader
-                handleSubmit = {this.handleSubmit}
-                handleChange = {this.handleChange}
-                state = {this.state}
+                    handleSubmit={this.handleSubmit}
+                    handleChange={this.handleChange}
+                    state={this.state}
                 />
                 <FavoritesElements/>
             </div>
@@ -50,5 +50,5 @@ class FavoritesList extends Component {
 
 export default connect(
     mapStateToProps, mapDispatchToProps)(
-        FavoritesList
+    FavoritesList
 )

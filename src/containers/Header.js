@@ -12,12 +12,8 @@ class Header extends Component {
         setGeolocation(this.props.mainLocationRefresh);
     }
 
-    submitGeoStatus(status) {
-        this.props.setGeolocationStatus(status);
-    }
-
     render() {
-        return(
+        return (
             <HeaderComponent refreshGeo={this.refreshGeo}/>
         )
     }

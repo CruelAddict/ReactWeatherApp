@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default (props) => {
-    return(
+    return (
         <div id={"app-header"}>
             <div className={"header-text-container"}>
                 <h1 className={"header-text"}>Погода здесь</h1>

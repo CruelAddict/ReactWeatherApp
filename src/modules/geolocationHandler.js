@@ -10,11 +10,11 @@ export default (callback) => {
     navigator.geolocation ?
         navigator.geolocation.getCurrentPosition((position) => {
             store.dispatch(Actions.setGeolocationStatus({
-                    permissionGranted: true,
-                    coordinates: {
-                        latitude: position.coords.latitude,
-                        longitude: position.coords.longitude
-                    }
+                permissionGranted: true,
+                coordinates: {
+                    latitude: position.coords.latitude,
+                    longitude: position.coords.longitude
+                }
             })).then(callback)
         }, () => {
             store.dispatch(Actions.setGeolocationStatus({

@@ -8,7 +8,7 @@ export default (state = {items: []}, action) => {
                     [
                         ...state.items,
                         {
-                            id: state.items.length === 0 ? 0 :  state.items[state.items.length - 1].id + 1,
+                            id: state.items.length === 0 ? 0 : state.items[state.items.length - 1].id + 1,
                             name: action.payload
                         }
                     ]
