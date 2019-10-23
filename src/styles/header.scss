@@ -1,0 +1,35 @@
+#app-header {
+  display: grid;
+  grid-template-columns: 36fr 64fr;
+  height: 80px;
+  align-items: flex-end;
+}
+
+.header-text-container {
+  color: rgb(109, 130, 138);
+}
+
+.header-text {
+  margin: 0;
+  display: inline-block;
+  font-size: 260%;
+  letter-spacing: 1.5px;
+  font-weight: lighter;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.geo-refresh-button {
+  width: 36%;
+  height: 62%;
+  font-size: 97%;
+  border-radius: 5px;
+  background-color: rgb(199, 210, 216);
+  color: rgb(141, 156, 163);
+  border: none;
+}

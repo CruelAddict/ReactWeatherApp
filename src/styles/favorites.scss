@@ -1,0 +1,49 @@
+.favorites-header-container {
+  margin-top: 40px;
+  h2 {
+    letter-spacing: 1.2px;
+    color: rgb(108, 128, 138);
+  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.favorites-action-button {
+  border-radius: 50px;
+  min-height: 43px !important;
+  min-width: 43px !important;
+  color: white;
+  border: none;
+  background-color: dimgrey;
+  font-size: 130%;
+  padding-bottom: 7px;
+  font-family: sans-serif;
+}
+
+.new-favorite-form {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    margin: 4px 31px 0  18px;
+  }
+}
+
+.add-favorite-input {
+  width: 57%;
+  border-radius: 3px;
+  height: 93%;
+  border: none;
+  background-color: rgb(241, 241, 241);
+  font-size: 110%;
+  padding-left: 20px;
+  letter-spacing: 0;
+  font-family: serif;
+  color: rgb(108, 128, 138);
+}
+
+.favorites-container {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

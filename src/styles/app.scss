@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 77%;
+  margin: 0 auto;
+  min-width: 750px;
+}
+
+button:focus {
+  outline:0;
+}
+
+input:focus {
+  outline: 1px solid grey;
+}
+
+button {
+  cursor: pointer;
+}
