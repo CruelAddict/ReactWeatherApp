@@ -8,6 +8,10 @@ export default (props) => {
             <i className={"fa fa-refresh fa-spin fa-4x"}></i>
         </div>
     </div>;
+    else if(props.state.isFailed) return <div className={"loading-main"}>
+        <h4 className={"loading-title-main error-message-main"}>{props.state.errorMessage}</h4>
+        <span className={"error-help-main"}>Чтобы попробовать еще раз, нажмите кнопку "Обновить геолокацию"</span>
+    </div>;
     else
         return (
             <div className={"main-weather-panel-container"}>

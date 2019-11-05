@@ -8,7 +8,12 @@ import './styles/main.scss'
 const store = configureStore();
 
 store.subscribe(() => {
-    localStorage.setItem('favorites', JSON.stringify(store.getState().favorites.items))
+    localStorage.setItem('favorites', JSON.stringify(store.getState().favorites.items.map(value => {
+        let valueClone = {...value};
+        delete valueClone['weatherObj'];
+        console.log(valueClone);
+        return valueClone;
+    })))
 });
 
 ReactDOM.render(

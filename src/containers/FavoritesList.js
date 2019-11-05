@@ -23,7 +23,6 @@ class FavoritesList extends Component {
         }
     }
 
-
     handleSubmit(event) {
         this.props.createFavorite(this.state.favoritesInput);
         event.preventDefault();

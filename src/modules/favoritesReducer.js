@@ -13,6 +13,21 @@ export default (state = {items: []}, action) => {
                         }
                     ]
             };
+        case Actions.Types.SET_FAVORITES_WEATHER:
+            return {
+                items: state.items.map((value, index, arr) => {
+                        if (value.id === action.payload.id) {
+                            return {
+                                id: value.id,
+                                name: value.name,
+                                weatherObj: action.payload.weatherObj
+                            }
+                        } else {
+                            return value
+                        }
+                    }
+                )
+            };
         case Actions.Types.DELETE_FAVORITE:
             return {
                 items: state.items.filter((value, index, arr) => (value.id !== action.payload))
