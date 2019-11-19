@@ -89,10 +89,10 @@ export default class WeatherPanel extends Component {
     }
 
     weatherByNameUrl = () =>
-        `http://api.openweathermap.org/data/2.5/weather?q=${this.props.city}&appid=${this.state.api_key}`;
+        `https://api.openweathermap.org/data/2.5/weather?q=${this.props.city}&appid=${this.state.api_key}`;
 
     weatherByCoordinatesUrl = () =>
-        `http://api.openweathermap.org/data/2.5/weather?lat=${store.getState().geo.coordinates.latitude}&lon=${store.getState().geo.coordinates.longitude}&appid=${this.state.api_key}`;
+        `https://api.openweathermap.org/data/2.5/weather?lat=${store.getState().geo.coordinates.latitude}&lon=${store.getState().geo.coordinates.longitude}&appid=${this.state.api_key}`;
 
     getWeather() {
         return new Promise( (resolve, reject) => {
