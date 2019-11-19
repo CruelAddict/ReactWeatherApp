@@ -83,7 +83,7 @@ export default class WeatherPanel extends Component {
     }
 
     getIcon(icon_code) {
-        return fetch(`http://openweathermap.org/img/wn/${icon_code}@2x.png`, {
+        return fetch(`https://openweathermap.org/img/wn/${icon_code}@2x.png`, {
             method: 'GET',
         })
     }
