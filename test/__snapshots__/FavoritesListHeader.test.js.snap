@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoritesListHeader Should render successfully 1`] = `
+<div
+  className="favorites-header-container"
+>
+  <div
+    className="favorites-title-container"
+  >
+    <h2>
+      Избранное
+    </h2>
+  </div>
+  <form
+    className="new-favorite-form"
+  >
+    <input
+      className="add-favorite-input"
+      placeholder="Добавить новый город"
+      value=""
+    />
+    <button
+      className="favorites-action-button"
+    >
+      +
+    </button>
+  </form>
+</div>
+`;

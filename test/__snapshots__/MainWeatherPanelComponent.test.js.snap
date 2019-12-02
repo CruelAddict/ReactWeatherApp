@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainWeatherPanelComponent Displays weather data for a city 1`] = `
+<div
+  className="main-weather-panel-container"
+>
+  <div
+    className="main-weather-panel-main-data"
+  >
+    <div
+      className="main-city-name-container"
+    >
+      <h2>
+        London
+      </h2>
+    </div>
+    <div
+      className="icon-cell"
+    >
+      <div
+        className="icon-container"
+      >
+        <img
+          alt="weather icon"
+          src="blob:http://localhost:3000/983a1031-dd0b-42bb-a079-8feb35f05a10"
+        />
+      </div>
+    </div>
+    <div
+      className="temperature-container"
+    >
+      <span>
+        4
+        °С
+      </span>
+    </div>
+  </div>
+  <_default
+    state={
+      Object {
+        "city": "London",
+        "coordinates": Object {
+          "latitude": 51.51,
+          "longitude": -0.13,
+        },
+        "isFailed": false,
+        "isLoading": false,
+        "weather_data": Object {
+          "cloudiness": "overcast clouds",
+          "humidity": 87,
+          "icon": "blob:http://localhost:3000/983a1031-dd0b-42bb-a079-8feb35f05a10",
+          "pressure": 1016,
+          "temperature": 3.9700000000000273,
+          "wind": 2.1,
+        },
+      }
+    }
+  />
+</div>
+`;
+
+exports[`MainWeatherPanelComponent Renders in "loading" state 1`] = `
+<div
+  className="loading-main"
+>
+  <h4
+    className="loading-title-main"
+  >
+    Подождите, данные загружаются
+  </h4>
+  <div
+    className="spinner-container"
+  >
+    <i
+      className="fa fa-refresh fa-spin fa-4x"
+    />
+  </div>
+</div>
+`;
+
+exports[`MainWeatherPanelComponent Should display an error if failed 1`] = `
+<div
+  className="loading-main"
+>
+  <h4
+    className="loading-title-main error-message-main"
+  />
+  <span
+    className="error-help-main"
+  >
+    Чтобы попробовать еще раз, нажмите кнопку "Обновить геолокацию"
+  </span>
+</div>
+`;

@@ -1,0 +1,666 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideWeatherPanel Should display data when loaded 1`] = `
+<Connect(SideWeatherPanel)
+  city="London"
+  favoriteId={0}
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <SideWeatherPanel
+    city="London"
+    deleteFavorite={[Function]}
+    favoriteId={0}
+    favorites={
+      Object {
+        "items": Array [
+          Object {
+            "id": 0,
+            "name": "London",
+            "weatherObj": Object {
+              "city": "London",
+              "coordinates": Object {
+                "latitude": 51.51,
+                "longitude": -0.13,
+              },
+              "isFailed": false,
+              "isLoading": false,
+              "weather_data": Object {
+                "cloudiness": "broken clouds",
+                "humidity": 81,
+                "icon": "fakeURL",
+                "pressure": 1011,
+                "temperature": 7.4500000000000455,
+                "wind": 2.6,
+              },
+            },
+          },
+        ],
+      }
+    }
+    geo={
+      Object {
+        "coordinates": null,
+        "permissionGranted": null,
+      }
+    }
+    setFavoriteWeather={[Function]}
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <_default
+      handleFavoriteRemoval={[Function]}
+      setWeather={[Function]}
+      state={
+        Object {
+          "api_key": "bf3565940c52aaa3383c1dbc23799bb1",
+          "city": "London",
+          "coordinates": Object {
+            "latitude": 51.51,
+            "longitude": -0.13,
+          },
+          "isFailed": false,
+          "isLoading": false,
+          "weather_data": Object {
+            "cloudiness": "broken clouds",
+            "humidity": 81,
+            "icon": "fakeURL",
+            "pressure": 1011,
+            "temperature": 7.4500000000000455,
+            "wind": 2.6,
+          },
+        }
+      }
+    >
+      <div
+        className="side-weather-panel-container"
+      >
+        <div
+          className="side-weather-panel-main-data"
+        >
+          <div
+            className="side-city-name-container"
+          >
+            <h2>
+              London
+            </h2>
+          </div>
+          <div
+            className="side-temperature-container"
+          >
+            <span>
+              7
+              °С
+            </span>
+          </div>
+          <div
+            className="side-icon-cell"
+          >
+            <div
+              className="side-icon-container"
+            >
+              <img
+                alt="weather icon"
+                src="fakeURL"
+              />
+            </div>
+          </div>
+          <div
+            className="delete-favorite-button-container"
+          >
+            <button
+              className="delete-favorite favorites-action-button"
+              onClick={[Function]}
+            >
+              ×
+            </button>
+          </div>
+        </div>
+        <div
+          className="side-weather-items"
+        >
+          <_default
+            state={
+              Object {
+                "api_key": "bf3565940c52aaa3383c1dbc23799bb1",
+                "city": "London",
+                "coordinates": Object {
+                  "latitude": 51.51,
+                  "longitude": -0.13,
+                },
+                "isFailed": false,
+                "isLoading": false,
+                "weather_data": Object {
+                  "cloudiness": "broken clouds",
+                  "humidity": 81,
+                  "icon": "fakeURL",
+                  "pressure": 1011,
+                  "temperature": 7.4500000000000455,
+                  "wind": 2.6,
+                },
+              }
+            }
+          >
+            <div
+              className="weather-value-list"
+            >
+              <div
+                className="weather-value-row"
+              >
+                <span
+                  className="weather-value-key"
+                >
+                  Ветер
+                </span>
+                <span
+                  className="weather-value-value"
+                >
+                  2.6
+                   m/s
+                </span>
+              </div>
+              <div
+                className="weather-value-row"
+              >
+                <span
+                  className="weather-value-key"
+                >
+                  Облачность
+                </span>
+                <span
+                  className="weather-value-value"
+                >
+                  Broken Clouds
+                </span>
+              </div>
+              <div
+                className="weather-value-row"
+              >
+                <span
+                  className="weather-value-key"
+                >
+                  Давление
+                </span>
+                <span
+                  className="weather-value-value"
+                >
+                  1011
+                   hpa
+                </span>
+              </div>
+              <div
+                className="weather-value-row"
+              >
+                <span
+                  className="weather-value-key"
+                >
+                  Влажность
+                </span>
+                <span
+                  className="weather-value-value"
+                >
+                  81
+                   %
+                </span>
+              </div>
+              <div
+                className="weather-value-row"
+              >
+                <span
+                  className="weather-value-key"
+                >
+                  Координаты
+                </span>
+                <span
+                  className="weather-value-value"
+                >
+                  [
+                  -0.13
+                  , 
+                  51.51
+                  ]
+                </span>
+              </div>
+            </div>
+          </_default>
+        </div>
+      </div>
+    </_default>
+  </SideWeatherPanel>
+</Connect(SideWeatherPanel)>
+`;
+
+exports[`SideWeatherPanel Should display error message if city does not respond 1`] = `
+<Connect(SideWeatherPanel)
+  city="ServerBroke"
+  favoriteId={1}
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <SideWeatherPanel
+    city="ServerBroke"
+    deleteFavorite={[Function]}
+    favoriteId={1}
+    favorites={
+      Object {
+        "items": Array [
+          Object {
+            "id": 0,
+            "name": "London",
+            "weatherObj": Object {
+              "city": "London",
+              "coordinates": Object {
+                "latitude": 51.51,
+                "longitude": -0.13,
+              },
+              "isFailed": false,
+              "isLoading": false,
+              "weather_data": Object {
+                "cloudiness": "broken clouds",
+                "humidity": 81,
+                "icon": "fakeURL",
+                "pressure": 1011,
+                "temperature": 7.4500000000000455,
+                "wind": 2.6,
+              },
+            },
+          },
+          Object {
+            "id": 1,
+            "name": "ServerBroke",
+            "weatherObj": Object {
+              "errorMessage": "Сервер не отвечает",
+              "isFailed": true,
+              "isLoading": false,
+            },
+          },
+        ],
+      }
+    }
+    geo={
+      Object {
+        "coordinates": null,
+        "permissionGranted": null,
+      }
+    }
+    setFavoriteWeather={[Function]}
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <_default
+      handleFavoriteRemoval={[Function]}
+      setWeather={[Function]}
+      state={
+        Object {
+          "api_key": "bf3565940c52aaa3383c1dbc23799bb1",
+          "errorMessage": "Сервер не отвечает",
+          "isFailed": true,
+          "isLoading": false,
+        }
+      }
+    >
+      <div
+        className="side-weather-panel-container"
+      >
+        <div
+          className="side-weather-panel-main-data"
+        >
+          <div
+            className="side-city-name-container"
+          >
+            <h2 />
+          </div>
+          <div
+            className="side-temperature-container"
+          />
+          <div
+            className="side-icon-cell"
+          >
+            <div />
+          </div>
+          <div
+            className="delete-favorite-button-container"
+          >
+            <button
+              className="delete-favorite favorites-action-button"
+              onClick={[Function]}
+            >
+              ×
+            </button>
+          </div>
+        </div>
+        <div
+          className="loading-side"
+        >
+          <h4
+            className="loading-title-side side-error-message"
+          >
+            Сервер не отвечает
+          </h4>
+          <div
+            className="refresh-button-container"
+          >
+            <button
+              className="refresh-button"
+              onClick={[Function]}
+            >
+              Попробовать снова
+            </button>
+          </div>
+        </div>
+      </div>
+    </_default>
+  </SideWeatherPanel>
+</Connect(SideWeatherPanel)>
+`;
+
+exports[`SideWeatherPanel Should display error message if city not found 1`] = `
+<Connect(SideWeatherPanel)
+  city="CityDoesNotExist"
+  favoriteId={2}
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <SideWeatherPanel
+    city="CityDoesNotExist"
+    deleteFavorite={[Function]}
+    favoriteId={2}
+    favorites={
+      Object {
+        "items": Array [
+          Object {
+            "id": 0,
+            "name": "London",
+            "weatherObj": Object {
+              "city": "London",
+              "coordinates": Object {
+                "latitude": 51.51,
+                "longitude": -0.13,
+              },
+              "isFailed": false,
+              "isLoading": false,
+              "weather_data": Object {
+                "cloudiness": "broken clouds",
+                "humidity": 81,
+                "icon": "fakeURL",
+                "pressure": 1011,
+                "temperature": 7.4500000000000455,
+                "wind": 2.6,
+              },
+            },
+          },
+          Object {
+            "id": 1,
+            "name": "ServerBroke",
+            "weatherObj": Object {
+              "errorMessage": "Сервер не отвечает",
+              "isFailed": true,
+              "isLoading": false,
+            },
+          },
+          Object {
+            "id": 2,
+            "name": "CityDoesNotExist",
+            "weatherObj": Object {
+              "errorMessage": "Город не найден",
+              "isFailed": true,
+              "isLoading": false,
+            },
+          },
+        ],
+      }
+    }
+    geo={
+      Object {
+        "coordinates": null,
+        "permissionGranted": null,
+      }
+    }
+    setFavoriteWeather={[Function]}
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <_default
+      handleFavoriteRemoval={[Function]}
+      setWeather={[Function]}
+      state={
+        Object {
+          "api_key": "bf3565940c52aaa3383c1dbc23799bb1",
+          "errorMessage": "Город не найден",
+          "isFailed": true,
+          "isLoading": false,
+        }
+      }
+    >
+      <div
+        className="side-weather-panel-container city-not-found"
+      >
+        <div
+          className="side-weather-panel-main-data"
+        >
+          <div
+            className="side-city-name-container"
+          >
+            <h2 />
+          </div>
+          <div
+            className="side-temperature-container"
+          />
+          <div
+            className="side-icon-cell"
+          >
+            <div />
+          </div>
+          <div
+            className="delete-favorite-button-container"
+          >
+            <button
+              className="delete-favorite favorites-action-button"
+              onClick={[Function]}
+            >
+              ×
+            </button>
+          </div>
+        </div>
+        <div
+          className="loading-side"
+        >
+          <h4
+            className="loading-title-side side-error-message"
+          >
+            Город не найден
+          </h4>
+        </div>
+      </div>
+    </_default>
+  </SideWeatherPanel>
+</Connect(SideWeatherPanel)>
+`;
+
+exports[`SideWeatherPanel Should initially be loading 1`] = `
+<Connect(SideWeatherPanel)
+  city="London"
+  favoriteId={3}
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <SideWeatherPanel
+    city="London"
+    deleteFavorite={[Function]}
+    favoriteId={3}
+    favorites={
+      Object {
+        "items": Array [
+          Object {
+            "id": 0,
+            "name": "London",
+            "weatherObj": Object {
+              "city": "London",
+              "coordinates": Object {
+                "latitude": 51.51,
+                "longitude": -0.13,
+              },
+              "isFailed": false,
+              "isLoading": false,
+              "weather_data": Object {
+                "cloudiness": "broken clouds",
+                "humidity": 81,
+                "icon": "fakeURL",
+                "pressure": 1011,
+                "temperature": 7.4500000000000455,
+                "wind": 2.6,
+              },
+            },
+          },
+          Object {
+            "id": 1,
+            "name": "ServerBroke",
+            "weatherObj": Object {
+              "errorMessage": "Сервер не отвечает",
+              "isFailed": true,
+              "isLoading": false,
+            },
+          },
+          Object {
+            "id": 2,
+            "name": "CityDoesNotExist",
+            "weatherObj": Object {
+              "errorMessage": "Город не найден",
+              "isFailed": true,
+              "isLoading": false,
+            },
+          },
+          Object {
+            "id": 3,
+            "name": "London",
+          },
+        ],
+      }
+    }
+    geo={
+      Object {
+        "coordinates": null,
+        "permissionGranted": null,
+      }
+    }
+    setFavoriteWeather={[Function]}
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <_default
+      handleFavoriteRemoval={[Function]}
+      setWeather={[Function]}
+      state={
+        Object {
+          "api_key": "bf3565940c52aaa3383c1dbc23799bb1",
+          "isLoading": true,
+        }
+      }
+    >
+      <div
+        className="side-weather-panel-container"
+      >
+        <div
+          className="side-weather-panel-main-data"
+        >
+          <div
+            className="side-city-name-container"
+          >
+            <h2 />
+          </div>
+          <div
+            className="side-temperature-container"
+          />
+          <div
+            className="side-icon-cell"
+          >
+            <div />
+          </div>
+          <div
+            className="delete-favorite-button-container"
+          >
+            <button
+              className="delete-favorite favorites-action-button"
+              onClick={[Function]}
+            >
+              ×
+            </button>
+          </div>
+        </div>
+        <div
+          className="loading-side"
+        >
+          <h4
+            className="loading-title-side"
+          >
+            Подождите, данные загружаются
+          </h4>
+          <div
+            className="spinner-container"
+          >
+            <i
+              className="fa fa-refresh fa-spin fa-4x"
+            />
+          </div>
+        </div>
+      </div>
+    </_default>
+  </SideWeatherPanel>
+</Connect(SideWeatherPanel)>
+`;

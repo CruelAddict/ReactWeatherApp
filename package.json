@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-transform-runtime": "^7.7.4",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "gh-pages": "^2.1.1",
@@ -29,7 +31,10 @@
   "jest": {
     "snapshotSerializers": [
       "<rootDir>/node_modules/enzyme-to-json/serializer"
-    ]
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|less|scss)$": "identity-obj-proxy"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,7 +57,9 @@
     "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.3",
     "jest": "^24.9.0",
+    "mock-xmlhttprequest": "^5.1.0",
     "react-addons-test-utils": "^15.6.2",
-    "react-test-renderer": "^16.12.0"
+    "react-test-renderer": "^16.12.0",
+    "sinon": "^7.5.0"
   }
 }

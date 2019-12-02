@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideWeatherPanelComponent Displays an error if city was not found 1`] = `
+<div
+  className="side-weather-panel-container city-not-found"
+>
+  <div
+    className="side-weather-panel-main-data"
+  >
+    <div
+      className="side-city-name-container"
+    >
+      <h2>
+        London
+      </h2>
+    </div>
+    <div
+      className="side-temperature-container"
+    />
+    <div
+      className="side-icon-cell"
+    >
+      <div />
+    </div>
+    <div
+      className="delete-favorite-button-container"
+    >
+      <button
+        className="delete-favorite favorites-action-button"
+      >
+        ×
+      </button>
+    </div>
+  </div>
+  <div
+    className="loading-side"
+  >
+    <h4
+      className="loading-title-side side-error-message"
+    >
+      Город не найден
+    </h4>
+  </div>
+</div>
+`;
+
+exports[`SideWeatherPanelComponent Displays an error if server does not respond 1`] = `
+<div
+  className="side-weather-panel-container"
+>
+  <div
+    className="side-weather-panel-main-data"
+  >
+    <div
+      className="side-city-name-container"
+    >
+      <h2>
+        London
+      </h2>
+    </div>
+    <div
+      className="side-temperature-container"
+    />
+    <div
+      className="side-icon-cell"
+    >
+      <div />
+    </div>
+    <div
+      className="delete-favorite-button-container"
+    >
+      <button
+        className="delete-favorite favorites-action-button"
+      >
+        ×
+      </button>
+    </div>
+  </div>
+  <div
+    className="loading-side"
+  >
+    <h4
+      className="loading-title-side side-error-message"
+    >
+      Сервер не отвечает
+    </h4>
+    <div
+      className="refresh-button-container"
+    >
+      <button
+        className="refresh-button"
+      >
+        Попробовать снова
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SideWeatherPanelComponent Displays weather data for a city 1`] = `
+<div
+  className="side-weather-panel-container"
+>
+  <div
+    className="side-weather-panel-main-data"
+  >
+    <div
+      className="side-city-name-container"
+    >
+      <h2>
+        London
+      </h2>
+    </div>
+    <div
+      className="side-temperature-container"
+    >
+      <span>
+        4
+        °С
+      </span>
+    </div>
+    <div
+      className="side-icon-cell"
+    >
+      <div
+        className="side-icon-container"
+      >
+        <img
+          alt="weather icon"
+          src="blob:http://localhost:3000/983a1031-dd0b-42bb-a079-8feb35f05a10"
+        />
+      </div>
+    </div>
+    <div
+      className="delete-favorite-button-container"
+    >
+      <button
+        className="delete-favorite favorites-action-button"
+      >
+        ×
+      </button>
+    </div>
+  </div>
+  <div
+    className="side-weather-items"
+  >
+    <_default
+      state={
+        Object {
+          "city": "London",
+          "coordinates": Object {
+            "latitude": 51.51,
+            "longitude": -0.13,
+          },
+          "isFailed": false,
+          "isLoading": false,
+          "weather_data": Object {
+            "cloudiness": "overcast clouds",
+            "humidity": 87,
+            "icon": "blob:http://localhost:3000/983a1031-dd0b-42bb-a079-8feb35f05a10",
+            "pressure": 1016,
+            "temperature": 3.9700000000000273,
+            "wind": 2.1,
+          },
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`SideWeatherPanelComponent Renders in "loading" state 1`] = `
+<div
+  className="side-weather-panel-container"
+>
+  <div
+    className="side-weather-panel-main-data"
+  >
+    <div
+      className="side-city-name-container"
+    >
+      <h2 />
+    </div>
+    <div
+      className="side-temperature-container"
+    />
+    <div
+      className="side-icon-cell"
+    >
+      <div />
+    </div>
+    <div
+      className="delete-favorite-button-container"
+    >
+      <button
+        className="delete-favorite favorites-action-button"
+      >
+        ×
+      </button>
+    </div>
+  </div>
+  <div
+    className="loading-side"
+  >
+    <h4
+      className="loading-title-side"
+    >
+      Подождите, данные загружаются
+    </h4>
+    <div
+      className="spinner-container"
+    >
+      <i
+        className="fa fa-refresh fa-spin fa-4x"
+      />
+    </div>
+  </div>
+</div>
+`;

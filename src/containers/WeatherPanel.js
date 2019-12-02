@@ -1,6 +1,5 @@
 import {Component} from 'react'
-import store from '../index'
-
+import store from '../modules/store';
 const api_key = 'bf3565940c52aaa3383c1dbc23799bb1';
 
 export default class WeatherPanel extends Component {
@@ -89,10 +88,10 @@ export default class WeatherPanel extends Component {
     }
 
     weatherByNameUrl = () =>
-        `https://api.openweathermap.org/data/2.5/weather?q=${this.props.city}&appid=${this.state.api_key}`;
+        `http://127.0.0.1:3000/weather?city=${this.props.city}`;
 
     weatherByCoordinatesUrl = () =>
-        `https://api.openweathermap.org/data/2.5/weather?lat=${store.getState().geo.coordinates.latitude}&lon=${store.getState().geo.coordinates.longitude}&appid=${this.state.api_key}`;
+        `http://127.0.0.1:3000/weather/coordinates?lat=${store.getState().geo.coordinates.latitude}&lon=${store.getState().geo.coordinates.longitude}`;
 
     getWeather() {
         return new Promise( (resolve, reject) => {

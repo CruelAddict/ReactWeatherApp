@@ -32,6 +32,10 @@ export default (state = {items: []}, action) => {
             return {
                 items: state.items.filter((value, index, arr) => (value.id !== action.payload))
             };
+
+        case Actions.Types.RESET_FAV:
+            return action.payload;
+
         default:
             return state;
     }

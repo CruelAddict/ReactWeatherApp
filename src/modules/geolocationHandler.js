@@ -1,4 +1,4 @@
-import store from '../index'
+import store from './store'
 import Actions from "./actions";
 
 const defaultCoordinates = {
@@ -23,6 +23,6 @@ export default (callback) => {
             })).then(callback);
         })
         :
-        console.log('Not supported')
+        console.log('Not supported');
     return Promise.resolve()
 }

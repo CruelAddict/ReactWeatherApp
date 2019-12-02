@@ -4,13 +4,13 @@ import Adapter from 'enzyme-adapter-react-16';
 import * as Enzyme from "enzyme";
 Enzyme.configure({ adapter: new Adapter() });
 
-import HeaderComponent from '../src/components/HeaderComponent';
+import FavoritesListHeader from '../src/components/FavoritesListHeader';
 
 
-describe ('HeaderComponent', () => {
+describe ('FavoritesListHeader', () => {
     it('Should render successfully', () => {
         const header = shallow(
-            <HeaderComponent/>
+            <FavoritesListHeader state={{favoritesInput: ""}}/>
         );
         expect(header).toMatchSnapshot()
     });

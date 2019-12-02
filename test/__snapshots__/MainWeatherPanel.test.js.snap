@@ -1,0 +1,445 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainWeatherPanel Should display data when loaded 1`] = `
+<Connect(MainWeatherPanel)
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <MainWeatherPanel
+    geo={
+      Object {
+        "coordinates": Object {
+          "latitude": 51.51,
+          "longitude": -0.13,
+        },
+        "permissionGranted": true,
+        "weatherObj": Object {
+          "city": "London",
+          "coordinates": Object {
+            "latitude": 51.51,
+            "longitude": -0.13,
+          },
+          "isFailed": false,
+          "isLoading": false,
+          "weather_data": Object {
+            "cloudiness": "broken clouds",
+            "humidity": 81,
+            "icon": "fakeURL",
+            "pressure": 1011,
+            "temperature": 7.4500000000000455,
+            "wind": 2.6,
+          },
+        },
+      }
+    }
+    setMainWeather={[Function]}
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <div>
+      <Header
+        mainLocationRefresh={[Function]}
+      >
+        <_default
+          refreshGeo={[Function]}
+        >
+          <div
+            id="app-header"
+          >
+            <div
+              className="header-text-container"
+            >
+              <h1
+                className="header-text"
+              >
+                Погода здесь
+              </h1>
+            </div>
+            <div
+              className="button-container"
+            >
+              <button
+                className="geo-refresh-button"
+                onClick={[Function]}
+              >
+                Обновить геолокацию
+              </button>
+            </div>
+          </div>
+        </_default>
+      </Header>
+      <_default
+        state={
+          Object {
+            "api_key": "bf3565940c52aaa3383c1dbc23799bb1",
+            "city": "London",
+            "coordinates": Object {
+              "latitude": 51.51,
+              "longitude": -0.13,
+            },
+            "isFailed": false,
+            "isLoading": false,
+            "weather_data": Object {
+              "cloudiness": "broken clouds",
+              "humidity": 81,
+              "icon": "fakeURL",
+              "pressure": 1011,
+              "temperature": 7.4500000000000455,
+              "wind": 2.6,
+            },
+          }
+        }
+      >
+        <div
+          className="main-weather-panel-container"
+        >
+          <div
+            className="main-weather-panel-main-data"
+          >
+            <div
+              className="main-city-name-container"
+            >
+              <h2>
+                London
+              </h2>
+            </div>
+            <div
+              className="icon-cell"
+            >
+              <div
+                className="icon-container"
+              >
+                <img
+                  alt="weather icon"
+                  src="fakeURL"
+                />
+              </div>
+            </div>
+            <div
+              className="temperature-container"
+            >
+              <span>
+                7
+                °С
+              </span>
+            </div>
+          </div>
+          <_default
+            state={
+              Object {
+                "api_key": "bf3565940c52aaa3383c1dbc23799bb1",
+                "city": "London",
+                "coordinates": Object {
+                  "latitude": 51.51,
+                  "longitude": -0.13,
+                },
+                "isFailed": false,
+                "isLoading": false,
+                "weather_data": Object {
+                  "cloudiness": "broken clouds",
+                  "humidity": 81,
+                  "icon": "fakeURL",
+                  "pressure": 1011,
+                  "temperature": 7.4500000000000455,
+                  "wind": 2.6,
+                },
+              }
+            }
+          >
+            <div
+              className="weather-value-list"
+            >
+              <div
+                className="weather-value-row"
+              >
+                <span
+                  className="weather-value-key"
+                >
+                  Ветер
+                </span>
+                <span
+                  className="weather-value-value"
+                >
+                  2.6
+                   m/s
+                </span>
+              </div>
+              <div
+                className="weather-value-row"
+              >
+                <span
+                  className="weather-value-key"
+                >
+                  Облачность
+                </span>
+                <span
+                  className="weather-value-value"
+                >
+                  Broken Clouds
+                </span>
+              </div>
+              <div
+                className="weather-value-row"
+              >
+                <span
+                  className="weather-value-key"
+                >
+                  Давление
+                </span>
+                <span
+                  className="weather-value-value"
+                >
+                  1011
+                   hpa
+                </span>
+              </div>
+              <div
+                className="weather-value-row"
+              >
+                <span
+                  className="weather-value-key"
+                >
+                  Влажность
+                </span>
+                <span
+                  className="weather-value-value"
+                >
+                  81
+                   %
+                </span>
+              </div>
+              <div
+                className="weather-value-row"
+              >
+                <span
+                  className="weather-value-key"
+                >
+                  Координаты
+                </span>
+                <span
+                  className="weather-value-value"
+                >
+                  [
+                  -0.13
+                  , 
+                  51.51
+                  ]
+                </span>
+              </div>
+            </div>
+          </_default>
+        </div>
+      </_default>
+    </div>
+  </MainWeatherPanel>
+</Connect(MainWeatherPanel)>
+`;
+
+exports[`MainWeatherPanel Should display error message if server does not respond 1`] = `
+<Connect(MainWeatherPanel)
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <MainWeatherPanel
+    geo={
+      Object {
+        "coordinates": Object {
+          "latitude": 123,
+          "longitude": 456,
+        },
+        "permissionGranted": true,
+        "weatherObj": Object {
+          "errorMessage": "Город не найден",
+          "isFailed": true,
+          "isLoading": false,
+        },
+      }
+    }
+    setMainWeather={[Function]}
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <div>
+      <Header
+        mainLocationRefresh={[Function]}
+      >
+        <_default
+          refreshGeo={[Function]}
+        >
+          <div
+            id="app-header"
+          >
+            <div
+              className="header-text-container"
+            >
+              <h1
+                className="header-text"
+              >
+                Погода здесь
+              </h1>
+            </div>
+            <div
+              className="button-container"
+            >
+              <button
+                className="geo-refresh-button"
+                onClick={[Function]}
+              >
+                Обновить геолокацию
+              </button>
+            </div>
+          </div>
+        </_default>
+      </Header>
+      <_default
+        state={
+          Object {
+            "api_key": "bf3565940c52aaa3383c1dbc23799bb1",
+            "errorMessage": "Город не найден",
+            "isFailed": true,
+            "isLoading": false,
+          }
+        }
+      >
+        <div
+          className="loading-main"
+        >
+          <h4
+            className="loading-title-main error-message-main"
+          >
+            Город не найден
+          </h4>
+          <span
+            className="error-help-main"
+          >
+            Чтобы попробовать еще раз, нажмите кнопку "Обновить геолокацию"
+          </span>
+        </div>
+      </_default>
+    </div>
+  </MainWeatherPanel>
+</Connect(MainWeatherPanel)>
+`;
+
+exports[`MainWeatherPanel Should initially be loading 1`] = `
+<Connect(MainWeatherPanel)
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <MainWeatherPanel
+    geo={
+      Object {
+        "coordinates": Object {
+          "latitude": 51.51,
+          "longitude": -0.13,
+        },
+        "permissionGranted": true,
+      }
+    }
+    setMainWeather={[Function]}
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <div>
+      <Header
+        mainLocationRefresh={[Function]}
+      >
+        <_default
+          refreshGeo={[Function]}
+        >
+          <div
+            id="app-header"
+          >
+            <div
+              className="header-text-container"
+            >
+              <h1
+                className="header-text"
+              >
+                Погода здесь
+              </h1>
+            </div>
+            <div
+              className="button-container"
+            >
+              <button
+                className="geo-refresh-button"
+                onClick={[Function]}
+              >
+                Обновить геолокацию
+              </button>
+            </div>
+          </div>
+        </_default>
+      </Header>
+      <_default
+        state={
+          Object {
+            "api_key": "bf3565940c52aaa3383c1dbc23799bb1",
+            "isLoading": true,
+          }
+        }
+      >
+        <div
+          className="loading-main"
+        >
+          <h4
+            className="loading-title-main"
+          >
+            Подождите, данные загружаются
+          </h4>
+          <div
+            className="spinner-container"
+          >
+            <i
+              className="fa fa-refresh fa-spin fa-4x"
+            />
+          </div>
+        </div>
+      </_default>
+    </div>
+  </MainWeatherPanel>
+</Connect(MainWeatherPanel)>
+`;

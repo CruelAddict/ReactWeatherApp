@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import {Provider} from 'react-redux'
-import configureStore from './modules/store'
-import './styles/main.scss'
-
-const store = configureStore();
+import {Provider} from 'react-redux';
+import store from './modules/store';
+import './styles/main.scss';
 
 store.subscribe(() => {
     localStorage.setItem('favorites', JSON.stringify(store.getState().favorites.items.map(value => {

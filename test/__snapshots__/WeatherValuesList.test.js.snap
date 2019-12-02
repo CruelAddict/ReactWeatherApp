@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherValuesList Displays weather data items for a city 1`] = `
+<div
+  className="weather-value-list"
+>
+  <div
+    className="weather-value-row"
+  >
+    <span
+      className="weather-value-key"
+    >
+      Ветер
+    </span>
+    <span
+      className="weather-value-value"
+    >
+      2.1
+       m/s
+    </span>
+  </div>
+  <div
+    className="weather-value-row"
+  >
+    <span
+      className="weather-value-key"
+    >
+      Облачность
+    </span>
+    <span
+      className="weather-value-value"
+    >
+      Overcast Clouds
+    </span>
+  </div>
+  <div
+    className="weather-value-row"
+  >
+    <span
+      className="weather-value-key"
+    >
+      Давление
+    </span>
+    <span
+      className="weather-value-value"
+    >
+      1016
+       hpa
+    </span>
+  </div>
+  <div
+    className="weather-value-row"
+  >
+    <span
+      className="weather-value-key"
+    >
+      Влажность
+    </span>
+    <span
+      className="weather-value-value"
+    >
+      87
+       %
+    </span>
+  </div>
+  <div
+    className="weather-value-row"
+  >
+    <span
+      className="weather-value-key"
+    >
+      Координаты
+    </span>
+    <span
+      className="weather-value-value"
+    >
+      [
+      -0.13
+      , 
+      51.51
+      ]
+    </span>
+  </div>
+</div>
+`;

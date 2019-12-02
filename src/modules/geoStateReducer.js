@@ -14,6 +14,9 @@ export default (state = {permissionGranted: null, coordinates: null}, action) =>
                 weatherObj: action.payload.weatherObj
             };
 
+        case Actions.Types.RESET_GEO:
+            return action.payload;
+
         default:
             return state;
     }

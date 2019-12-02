@@ -3,13 +3,34 @@ const Types = {
     DELETE_FAVORITE: "DELETE_FAVORITE",
     SET_GEOLOCATION: "SET_GEOLOCATION",
     SET_FAVORITES_WEATHER: "SET_FAVORITE_WEATHER",
-    SET_MAIN_WEATHER: "SET_MAIN_WEATHER"
+    SET_MAIN_WEATHER: "SET_MAIN_WEATHER",
+    RESET_GEO: "RESET_GEO",
+    RESET_FAV: "RESET_FAV"
 };
 
-const createFavorite = favorite => ({
-    type: Types.CREATE_FAVORITE,
-    payload: favorite
-});
+const resetGeoStore = state => dispatch => {
+    dispatch({
+        type: Types.RESET_GEO,
+        payload: state
+    });
+    return Promise.resolve();
+};
+
+const resetFavsStore = state => dispatch => {
+    dispatch({
+        type: Types.RESET_FAV,
+        payload: state
+    });
+    return Promise.resolve();
+};
+
+const createFavorite = favorite => dispatch => {
+    dispatch({
+        type: Types.CREATE_FAVORITE,
+        payload: favorite
+    });
+    return Promise.resolve();
+};
 
 const deleteFavorite = id => ({
     type: Types.DELETE_FAVORITE,
@@ -26,6 +47,7 @@ const setGeolocationStatus = newState => dispatch => {
 
 const setFavoriteWeather = (favorite, id) => dispatch => {
     favorite.getWeather().then(weatherObj => {
+        console.log('onset');
         dispatch({
             type: Types.SET_FAVORITES_WEATHER,
             payload: {
@@ -77,5 +99,7 @@ export default {
     setGeolocationStatus,
     setFavoriteWeather,
     setMainWeather,
+    resetGeoStore,
+    resetFavsStore,
     Types
 }
