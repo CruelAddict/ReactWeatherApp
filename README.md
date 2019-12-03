@@ -4,7 +4,7 @@ This is an ITMO web development lab.
 
 Install dependencies:
 
-###`npm i`
+### `npm i`
 
 Run it in dev mode with
 

@@ -4,7 +4,7 @@ import MainWeatherPanel from './containers/MainWeatherPanel'
 import setGeoStatus from './modules/geolocationHandler'
 import {connect} from 'react-redux'
 import Actions from "./modules/actions";
-import {NotificationContainer} from 'react-notifications'
+import {NotificationContainer, NotificationManager} from 'react-notifications'
 
 const mapStateToProps = state => ({
     permissionGranted: state.geo.permissionGranted,
@@ -26,9 +26,17 @@ class App extends React.Component {
     }
 
     fetchFavorites = async () => {
-        let response = await fetch('http://127.0.0.1:3000/favourites');
-        let items = await response.json();
-        items.map(item => {this.props.fetchFavorite(item.name)})
+        fetch('http://127.0.0.1:3000/favourites').then(async response => {
+            if (response.ok) {
+                let items = await response.json();
+                items.map(item => {this.props.fetchFavorite(item.name)})
+            } else {
+                NotificationManager.error('Не удалось загрузить список избранных городов', 'Сервер не отвечает')
+            }
+        }, response => {
+            NotificationManager.error('Не удалось загрузить список избранных городов', 'Сервер не отвечает')
+        })
+
     };
 
 

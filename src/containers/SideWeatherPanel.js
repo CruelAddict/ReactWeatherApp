@@ -77,6 +77,20 @@ class SideWeatherPanel extends WeatherPanel {
     }
 
     handleFavoriteRemoval() {
+        console.log(`deleting ${this.state.city}`);
+        fetch('http://127.0.0.1:3000/favourites/', {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify({
+                name : this.state.city
+            })
+        }).then(response => {
+            !response.ok && NotificationManager.error('Изменения могут быть не сохранены.', 'Произошла ошибка')
+        }, response => {
+            NotificationManager.error('Изменения могут быть не сохранены.', 'Произошла ошибка')
+        });
         this.props.deleteFavorite(this.props.favoriteId);
     }
 
