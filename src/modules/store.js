@@ -13,7 +13,7 @@ const savedItems = localStorage.getItem('favorites') ? JSON.parse(localStorage.g
 
 const initialState = {
     favorites: {
-        items: savedItems
+        items: []
     },
     geo: {
         permissionGranted: null,
