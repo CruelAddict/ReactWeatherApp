@@ -12,6 +12,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     createFavorite: item => dispatch(Actions.createFavorite(item)),
+    fetchFavorite: item => dispatch(Actions.fetchFavorite(item))
 });
 
 
@@ -26,7 +27,7 @@ class App extends React.Component {
     fetchFavorites = async () => {
         let response = await fetch('http://127.0.0.1:3000/favourites');
         let items = await response.json();
-        items.map(item => {this.props.createFavorite(item.name)})
+        items.map(item => {this.props.fetchFavorite(item.name)})
     };
 
 

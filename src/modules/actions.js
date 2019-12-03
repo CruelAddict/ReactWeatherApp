@@ -5,7 +5,9 @@ const Types = {
     SET_FAVORITES_WEATHER: "SET_FAVORITE_WEATHER",
     SET_MAIN_WEATHER: "SET_MAIN_WEATHER",
     RESET_GEO: "RESET_GEO",
-    RESET_FAV: "RESET_FAV"
+    RESET_FAV: "RESET_FAV",
+    FETCH_FAVORITE: "FETCH_FAVORITE",
+    MARK_AS_POSTED: "MARK_AS_POSTED"
 };
 
 const resetGeoStore = state => dispatch => {
@@ -30,6 +32,20 @@ const createFavorite = favorite => dispatch => {
         payload: favorite
     });
     return Promise.resolve();
+};
+
+const fetchFavorite = favorite => dispatch => {
+    dispatch({
+        type: Types.FETCH_FAVORITE,
+        payload: favorite
+    })
+};
+
+const markAsPosted = id => dispatch => {
+    dispatch({
+        type: Types.MARK_AS_POSTED,
+        payload:id
+    })
 };
 
 const deleteFavorite = id => ({
@@ -101,5 +117,7 @@ export default {
     setMainWeather,
     resetGeoStore,
     resetFavsStore,
+    fetchFavorite,
+    markAsPosted,
     Types
 }

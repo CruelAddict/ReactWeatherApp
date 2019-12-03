@@ -10,7 +10,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     deleteFavorite: id => dispatch(Actions.deleteFavorite(id)),
-    setFavoriteWeather: (favorite, id) => dispatch(Actions.setFavoriteWeather(favorite, id))
+    setFavoriteWeather: (favorite, id) => dispatch(Actions.setFavoriteWeather(favorite, id)),
+    markAsPosted: id => dispatch(Actions.markAsPosted(id))
 });
 
 
@@ -20,6 +21,7 @@ class SideWeatherPanel extends WeatherPanel {
         super();
         this.handleFavoriteRemoval = this.handleFavoriteRemoval.bind(this);
         this.setWeather = this.setWeather.bind(this);
+        this.postFavourite = this.postFavourite.bind(this)
     }
 
     componentDidMount() {
@@ -29,9 +31,34 @@ class SideWeatherPanel extends WeatherPanel {
         );
     }
 
+    async postFavourite(newState) {
+        await   this.props.markAsPosted(this.props.favoriteId);
+        console.log('posting favorite');
+        fetch('http://127.0.0.1:3000/favourites/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify({
+                name : newState.city
+            })
+        }).then(response => {
+            console.log(response);
+            // this.props.markAsPosted(this.props.id)
+        }, response => {
+            console.log('Error!');
+            console.log(response);
+        });
+    }
+
     componentDidUpdate(prevProps) {
+        let favoriteObj = this.props.favorites.items.filter(value => (value.id === this.props.favoriteId))[0];
+
         let oldData = prevProps.favorites.items.filter(value => (value.id === this.props.favoriteId))[0].weatherObj;
-        let newData = this.props.favorites.items.filter(value => (value.id === this.props.favoriteId))[0].weatherObj;
+        let newData = favoriteObj.weatherObj;
+        if(!favoriteObj.pushedToServer && !newData.isFailed) {
+            oldData === undefined && newData !== undefined && this.postFavourite(newData);
+        }
         oldData !== newData &&  this.setState(newData);
     }
 
