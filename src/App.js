@@ -4,6 +4,7 @@ import MainWeatherPanel from './containers/MainWeatherPanel'
 import setGeoStatus from './modules/geolocationHandler'
 import {connect} from 'react-redux'
 import Actions from "./modules/actions";
+import {NotificationContainer} from 'react-notifications'
 
 const mapStateToProps = state => ({
     permissionGranted: state.geo.permissionGranted,
@@ -42,6 +43,7 @@ class App extends React.Component {
             <div id={"app"}>
                 <MainWeatherPanel coordinates={this.props.coordinates}/>
                 <FavoritesList/>
+                <NotificationContainer/>
             </div>
     };
 }

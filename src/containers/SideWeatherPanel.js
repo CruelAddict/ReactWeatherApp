@@ -3,6 +3,7 @@ import WeatherPanel from './WeatherPanel'
 import SideWeatherPanelComponent from '../components/SideWeatherPanelComponent'
 import {connect} from 'react-redux';
 import Actions from "../modules/actions";
+import {NotificationManager} from 'react-notifications';
 
 const mapStateToProps = state => ({
     ...state
@@ -44,10 +45,10 @@ class SideWeatherPanel extends WeatherPanel {
             })
         }).then(response => {
             console.log(response);
-            // this.props.markAsPosted(this.props.id)
         }, response => {
             console.log('Error!');
             console.log(response);
+            NotificationManager.error('К сожалению, после перезагрузки страницы изменения будут потеряны', 'Не удалось сохранить избранный город');
         });
     }
 

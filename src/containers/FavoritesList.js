@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import Actions from "../modules/actions";
 import FavoritesListHeader from '../components/FavoritesListHeader'
 import FavoritesElements from './FavoritesElements'
+import {NotificationManager} from 'react-notifications';
 
 const mapStateToProps = state => ({
     ...state
@@ -24,8 +25,13 @@ class FavoritesList extends Component {
     }
 
     handleSubmit(event) {
-        this.props.createFavorite(this.state.favoritesInput);
         event.preventDefault();
+
+        if(!this.props.favorites.items.map(item => item.name).includes(this.state.favoritesInput)){
+            this.props.createFavorite(this.state.favoritesInput);
+        } else {
+            NotificationManager.error('Город уже находится в списке')
+        }
     }
 
     handleChange(event) {
