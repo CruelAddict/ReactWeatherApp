@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoritesElements Renders if store has items 1`] = `<Connect(FavoritesElementComponent) />`;
+
+exports[`FavoritesElements Renders if store is empty 1`] = `<Connect(FavoritesElementComponent) />`;

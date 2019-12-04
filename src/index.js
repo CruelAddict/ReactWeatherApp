@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import {AppConnected} from './App';
 import {Provider} from 'react-redux';
 import store from './modules/store';
 import './styles/main.scss';
@@ -16,7 +16,7 @@ store.subscribe(() => {
 
 ReactDOM.render(
     <Provider store={store}>
-        <App/>
+        <AppConnected/>
     </Provider>,
     document.getElementById('root'));
 

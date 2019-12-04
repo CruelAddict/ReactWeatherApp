@@ -35,7 +35,7 @@ window.fetch.returns(Promise.resolve(mockApiResponse(imgData)));
 Enzyme.configure({adapter: new Adapter()});
 
 const server = MockXMLHttpRequest.newServer({
-    get: ['https://api.openweathermap.org/data/2.5/weather?lat=51.51&lon=-0.13&appid=bf3565940c52aaa3383c1dbc23799bb1', {
+    get: ['http://127.0.0.1:3000/weather/coordinates?lat=51.51&lon=-0.13', {
         // status: 200 is the default
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -56,7 +56,7 @@ const server = MockXMLHttpRequest.newServer({
     }],
 }).install();
 
-server.get('https://api.openweathermap.org/data/2.5/weather?lat=123&lon=456&appid=bf3565940c52aaa3383c1dbc23799bb1', {
+server.get('http://127.0.0.1:3000/weather/coordinates?lat=123&lon=456', {
     status: 404,
     headers: {'Content-Type': 'application/json'},
     body: 'city not found'

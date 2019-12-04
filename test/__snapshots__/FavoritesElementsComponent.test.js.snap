@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoritesElementsComponent Renders if store has items 1`] = `
+<ContextProvider
+  value={null}
+>
+  <FavoritesElementComponent
+    dispatch={[Function]}
+    items={
+      Array [
+        Object {
+          "id": 0,
+          "name": "London",
+          "pushedToServer": false,
+        },
+      ]
+    }
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  />
+</ContextProvider>
+`;
+
+exports[`FavoritesElementsComponent Renders if store is empty 1`] = `
+<ContextProvider
+  value={null}
+>
+  <FavoritesElementComponent
+    dispatch={[Function]}
+    items={Array []}
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  />
+</ContextProvider>
+`;

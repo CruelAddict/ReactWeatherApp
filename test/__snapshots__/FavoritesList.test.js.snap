@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoritesList Renders if store has items 1`] = `
+<ContextProvider
+  value={null}
+>
+  <FavoritesList
+    createFavorite={[Function]}
+    favorites={
+      Object {
+        "items": Array [
+          Object {
+            "id": 0,
+            "name": "London",
+            "pushedToServer": false,
+          },
+        ],
+      }
+    }
+    geo={
+      Object {
+        "coordinates": null,
+        "permissionGranted": null,
+      }
+    }
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  />
+</ContextProvider>
+`;
+
+exports[`FavoritesList Renders if store is empty 1`] = `
+<ContextProvider
+  value={null}
+>
+  <FavoritesList
+    createFavorite={[Function]}
+    favorites={
+      Object {
+        "items": Array [],
+      }
+    }
+    geo={
+      Object {
+        "coordinates": null,
+        "permissionGranted": null,
+      }
+    }
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  />
+</ContextProvider>
+`;
